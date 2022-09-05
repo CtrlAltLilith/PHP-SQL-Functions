@@ -17,7 +17,7 @@ $GLOBALS['conn'] = mysqli_connect(
 Convert SQL result variables to PHP global variables 
 
         sqlwrapper(
-            "SELECT `variable` FROM `posts` WHERE `var` = ?",
+            "SELECT `variable` FROM `table` WHERE `var` = ?",
             "s",
             array(&$variable),     //params array
             array(&$output)        //objects in the array
