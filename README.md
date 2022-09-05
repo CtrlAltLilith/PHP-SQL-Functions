@@ -1,14 +1,21 @@
 # PHP-SQL-Functions
 Configure lib.php 
+
 Edit: 
+
+`
 $GLOBALS['conn'] = mysqli_connect(
     'servername',
     'serveruser',
     'serverpassword',
     'db'
 );
-sqlwrapper($sql, $paramtypes, $params, $results)
+`
+
+`sqlwrapper($sql, $paramtypes, $params, $results)`
+
 Convert SQL result variables to PHP Session variables 
+
         sqlwrapper(
             "SELECT `variable` FROM `posts` WHERE `var` = ?",
             "s",
@@ -17,13 +24,18 @@ Convert SQL result variables to PHP Session variables
         );
 
 Usage: 
-gettablenum($sql, $paramtypes, $params)
+
+`gettablenum($sql, $paramtypes, $params)`
+
 Gets the number of rows from a table
+
 ex: 
-    if (
+
+   ` if (
         gettablenum(
-            "SELECT * FROM table WHERE `var` = ?",
+            "SELECT * FROM table WHERE var = ?",
             "s",
             array(&$_SESSION['var'])
         ) == 1
     ) {
+    `
